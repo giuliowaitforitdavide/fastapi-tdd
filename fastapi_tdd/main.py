@@ -1,5 +1,4 @@
 import re
-from typing import Union
 
 from fastapi import FastAPI
 
@@ -12,7 +11,7 @@ async def read_root():
 
 
 @app.get("/{number}")
-async def create_counter_from_our_number(number: int, ans: Union[int, None] = None):
+async def create_counter_from_our_number(number: int):
     string_number = str(number)
     ans = {}
     for i in range(1, 10):
