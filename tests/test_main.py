@@ -27,3 +27,9 @@ def test_fourth_case():
     response = client.get("/111221")
     assert response.status_code == 200
     assert response.json() == {"1": 4, "2": 2}
+
+
+def test_fifth_case():
+    response = client.get("/007")
+    assert response.status_code == 200
+    assert response.json() == {"0": 2, "7": 1}
